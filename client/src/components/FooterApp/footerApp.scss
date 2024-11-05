@@ -1,0 +1,35 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+
+  .content {
+    flex: 1; 
+  }
+}
+
+.custom-footer {
+  background-color: #333333;
+  height: 56px;
+  align-items: center;
+  color: #ffffff;
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin: 0;
+      padding-right: 10px;
+    }
+
+    .linkedin-icon {
+      color: #ffffff;
+      font-size: 20px;
+    }
+
+    .linkedin-icon:hover {
+      color: #d3d3d3;
+    }
+  }
+}

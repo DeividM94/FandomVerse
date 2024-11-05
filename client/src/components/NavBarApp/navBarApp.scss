@@ -1,0 +1,23 @@
+.custom-navbar {
+  background-color: #333333;
+
+  .nav-link {
+    color: #ffffff; 
+    
+    &:hover {
+      color: #d3d3d3; 
+    }
+  }
+
+  .link {
+
+    a {
+      text-decoration: none; 
+      color: #ffffff; 
+
+      &:hover {
+        color: #d3d3d3; 
+      }
+    }
+  }
+}
