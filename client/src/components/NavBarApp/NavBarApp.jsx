@@ -11,7 +11,11 @@ export const NavBarApp = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Link to='/harry-potter'>
+            <img src="./harry-potter-logo.png" 
+            alt="harry-potter-logo"
+            className='hp-logo' />
+            </Link>
             <Nav.Link href="#features">Features</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>

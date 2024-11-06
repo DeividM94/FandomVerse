@@ -7,11 +7,11 @@ export const MiniCard = ({ data }) => {
   
   return (
     <div className="book">
-      <div>
+      <div className='text'>
         <h1>{data.name}</h1>
-        <p >{data.alternate_names[0]}</p>
-        <p >{data.ancestry}</p>
-        <p >{data.house}</p>
+        <p>{data.alternate_names[0]}</p>
+        <p>{data.ancestry}</p>
+        <p>{data.house}</p>
         <div>{data.patronus ? <p> Patronus: {data.patronus} </p> : "" }
         </div>
       </div>
