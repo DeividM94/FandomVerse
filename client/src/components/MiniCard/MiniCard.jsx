@@ -3,10 +3,9 @@ import './minicard.scss';
 
 
 export const MiniCard = ({ data }) => {
-  console.log(data);
-  
+
   return (
-    <div className="book">
+    <div className="book"  >
       <div className='text'>
         <h1>{data.name}</h1>
         <p>{data.alternate_names[0]}</p>
