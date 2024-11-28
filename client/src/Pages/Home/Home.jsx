@@ -12,7 +12,9 @@ export const Home = () => {
           className="card card-1"
           onClick={() => navigate("/harry-potter")}
         ></div>
-        <div className="card">Card 2</div>
+        <div className="card card-2"
+         onClick={() => navigate("/stranger-things")}
+         ></div>
         <div className="card">Card 3</div>
         <div className="card">Card 4</div>
       </div>

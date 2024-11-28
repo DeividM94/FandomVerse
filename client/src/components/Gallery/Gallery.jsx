@@ -1,15 +1,15 @@
 import React from 'react'
 import { MiniCard } from '../MiniCard/MiniCard'
 
-export const Gallery = ({dataHarryPotter}) => {
+export const Gallery = ({items}) => {
 
  
 
   return (
     <div className='d-flex gap-5 flex-wrap justify-content-center pt-5 px-5'>
-      {dataHarryPotter?.map(e=>{
+      {items?.map(item=>{
         return(
-          <MiniCard key={e.id} data={e}/>
+          <MiniCard key={item.id} data={item}/>
         )
       })}
 
