@@ -1,13 +1,23 @@
-import React, { useEffect, useState } from "react";
+import {FC, useEffect, useState } from "react";
 import axios from "axios";
 import "./harryPotter.scss";
 
 import { Gallery } from "../../components/Gallery/Gallery";
 
-export const HarryPotter = () => {
-  const [characters, setCharacters] = useState([]);
-  const [searchHarryPotter, setSearchHarryPotter] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
+export interface Character {
+  id: string;
+  name: string;
+  alternate_names: string;
+  ancestry: string;
+  house: string;
+  patronus: string;
+  image: string;
+}
+
+export const HarryPotter: FC = () => {
+  const [characters, setCharacters] = useState<Character[]>([]);
+  const [searchHarryPotter, setSearchHarryPotter] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     axios
@@ -29,7 +39,7 @@ export const HarryPotter = () => {
     character.name.toLowerCase().includes(searchHarryPotter.toLowerCase())
   );
 
-  const handleSearchChange = (e) => {
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchHarryPotter(e.target.value);
   };
 

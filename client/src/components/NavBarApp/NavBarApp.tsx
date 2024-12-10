@@ -1,9 +1,9 @@
-import React from 'react';
+import { FC } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import './NavBarApp.scss'; 
 import { Link } from 'react-router-dom';
 
-export const NavBarApp = () => {
+export const NavBarApp: FC = () => {
   return (
     <Navbar className="custom-navbar" expand="lg"> 
       <Container fluid>

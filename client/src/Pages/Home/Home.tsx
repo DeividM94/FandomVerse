@@ -1,8 +1,8 @@
-import React from "react";
+import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import "./home.scss";
 
-export const Home = () => {
+export const Home: FC = () => {
   const navigate = useNavigate();
 
   return (

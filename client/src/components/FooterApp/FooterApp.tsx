@@ -1,8 +1,8 @@
-import React from "react";
+import { FC } from "react";
 import { Container } from "react-bootstrap";
 import { FaLinkedin } from "react-icons/fa";
 import "./footerApp.scss";
-const FooterApp = () => {
+const FooterApp: FC = () => {
   return (
     <footer className="custom-footer d-flex">
       <Container fluid>

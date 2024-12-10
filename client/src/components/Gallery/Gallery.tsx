@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { MiniCard } from '../MiniCard/MiniCard'
+import { Character } from "../../Pages/HarryPotter/HarryPotter"
 
-export const Gallery = ({items}) => {
+
+interface GalleryProps {
+  items: Character[]
+}
+
+export const Gallery: FC <GalleryProps> = ({items}) => {
 
  
 
