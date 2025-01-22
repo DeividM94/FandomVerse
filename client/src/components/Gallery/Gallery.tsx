@@ -1,24 +1,30 @@
-import React, { FC } from 'react'
-import { MiniCard } from '../MiniCard/MiniCard'
-import { Character } from "../../Pages/HarryPotter/HarryPotter"
+import React, { FC } from "react";
+import { MiniCard } from "../MiniCard/MiniCard";
 
-
-interface GalleryProps {
-  items: Character[]
+interface BaseCharacter {
+  name: string;
+  image?: string;
+  photo?: string;
+  alternate_names?: string[];
+  ancestry?: string;
+  house?: string;
+  patronus?: string;
+  residence?: string;
+  born?: string;
 }
 
-export const Gallery: FC <GalleryProps> = ({items}) => {
+interface GalleryProps<T extends BaseCharacter> {
+  items: T[];
+}
 
- 
-
+export const Gallery = <T extends BaseCharacter>({
+  items,
+}: GalleryProps<T>): JSX.Element => {
   return (
-    <div className='d-flex gap-5 flex-wrap justify-content-center pt-5 px-5'>
-      {items?.map(item=>{
-        return(
-          <MiniCard key={item.id} data={item}/>
-        )
-      })}
-
+    <div className="d-flex gap-5 flex-wrap justify-content-center pt-5 px-5">
+      {items?.map((item: T, index: number) => (
+        <MiniCard key={index} data={item} />
+      ))}
     </div>
-  )
-}
+  );
+};
