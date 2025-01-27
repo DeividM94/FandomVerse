@@ -10,7 +10,7 @@ const FooterApp: FC = () => {
           <p>
             &copy; 2024 {""}
             <a
-              href="https://www.linkedin.com/in/tu-perfil"
+              href="https://www.linkedin.com/in/dmontesgonzalez"
               target="_blank"
               rel="noopener noreferrer"
               className="text-decoration-none text-white"

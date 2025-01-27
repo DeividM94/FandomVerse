@@ -2,7 +2,7 @@
   background-image: url("./wallpaper.jpeg");
   background-size: cover; 
   background-position: center;
-  height: calc(100vh - 112px); 
+  height: calc(100vh - 60.95px - 56px); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,6 +48,12 @@
     background-image: url('./stranger-things-card.jpg');
     background-position: center;
     background-size: cover;
-    
+  }
+
+  .card-3, .card-4 {
+    background-image: url('./comming-soon.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }

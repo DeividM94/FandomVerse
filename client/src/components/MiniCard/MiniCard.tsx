@@ -15,9 +15,24 @@ interface MiniCardProps {
   };
 }
 
-export const MiniCard: React.FC<MiniCardProps> = ({ data }) => {
+interface MiniCardProps {
+  data: {
+    name: string;
+    alternate_names?: string[];
+    ancestry?: string;
+    house?: string;
+    patronus?: string;
+    image?: string;
+    photo?: string;
+    residence?: string;
+    born?: string;
+  };
+  styleType: "harry-potter" | "stranger-things"; // Tipo de estilo
+}
+
+export const MiniCard: React.FC<MiniCardProps> = ({ data, styleType }) => {
   return (
-    <div className="book">
+    <div className={`book ${styleType}`}> {/* Aplica clase dependiendo de styleType */}
       <div className="text">
         <h1>{data.name}</h1>
         {data.alternate_names && <p>{data.alternate_names[0]}</p>}

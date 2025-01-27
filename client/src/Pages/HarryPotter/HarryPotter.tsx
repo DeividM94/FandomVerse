@@ -89,7 +89,7 @@ export const HarryPotter: FC = () => {
       ) : (
         <>
           <div className="d-flex justify-content-around">
-            <Gallery<Character> items={currentItems} />
+            <Gallery<Character> items={currentItems}  styleType="harry-potter" />
           </div>
 
           <div className="pagination-container">{paginationButtons}</div>

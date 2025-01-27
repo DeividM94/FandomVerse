@@ -15,8 +15,8 @@ export const Home: FC = () => {
         <div className="card card-2"
          onClick={() => navigate("/stranger-things")}
          ></div>
-        <div className="card">Card 3</div>
-        <div className="card">Card 4</div>
+        <div className="card card-3"></div>
+        <div className="card card-4"></div>
       </div>
     </div>
   );
