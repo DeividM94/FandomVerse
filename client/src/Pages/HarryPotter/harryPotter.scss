@@ -1,10 +1,9 @@
 .harry-potter-container {
   background-image: url('./hp-background.jpg');
-  padding: 20px 0 30px 0; 
+  padding: 20px 0 30px 0;
   min-height: calc(100vh - 60.95px - 56px);
   cursor: pointer;
 }
-
 
 .harry-potter-title {
   margin-bottom: 1.5rem;
@@ -73,7 +72,7 @@
   align-items: center;
   margin-top: 2rem;
   gap: 10px;
-  flex-wrap: wrap; // Permite que los botones se ajusten en varias líneas si el espacio es limitado
+  flex-wrap: wrap;
 
   .pagination-button {
     background-color: #9c7939;
@@ -103,25 +102,24 @@
   }
 }
 
-/* Ajustes responsivos */
 @media (max-width: 768px) {
   .pagination-container {
-    gap: 5px; // Reduce el espacio entre los botones
+    gap: 5px;
   }
 
   .pagination-button {
-    padding: 0.4rem 0.8rem; // Reduce el tamaño del botón
-    font-size: 0.9rem; // Disminuye el tamaño del texto
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
   .pagination-container {
-    gap: 3px; // Aún menos espacio entre botones
+    gap: 3px;
   }
 
   .pagination-button {
     padding: 0.3rem 0.6rem;
-    font-size: 0.8rem; // Texto más pequeño para pantallas muy pequeñas
+    font-size: 0.8rem;
   }
 }

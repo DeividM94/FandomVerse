@@ -2,12 +2,11 @@ import { FC, useEffect, useState } from "react";
 import axios from "axios";
 import { Gallery } from "../../components/Gallery/Gallery";
 import "./strangerThings.scss";
-import { StrangerThingsCharacter } from './StrangerThings';
 
 export interface StrangerThingsCharacter {
   id: string;
   name: string;
-  residence: string;
+  residence: string[];
   photo: string;
   born: string;
 }
@@ -17,18 +16,19 @@ export const StrangerThings: FC = () => {
   const [searchStrangerThings, setSearchStrangerThings] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 40; // Items per page
+  const itemsPerPage = 40;
 
   useEffect(() => {
     const fetchCharacters = async () => {
       let allCharacters: StrangerThingsCharacter[] = [];
       console.log(characters);
-      
-      
+
       for (let page = 1; page <= 6; page++) {
         try {
-          const response = await axios.get(`https://stranger-things-api.fly.dev/api/v1/characters?page=${page}`);
-          allCharacters = [...allCharacters, ...response.data]; // Concatenar los personajes de cada página
+          const response = await axios.get(
+            `https://stranger-things-api.fly.dev/api/v1/characters?page=${page}`
+          );
+          allCharacters = [...allCharacters, ...response.data];
         } catch (err) {
           console.error("Error fetching characters:", err);
         }
@@ -41,9 +41,8 @@ export const StrangerThings: FC = () => {
     fetchCharacters();
   }, []);
 
-  const datosFiltrados = characters.filter(
-    (character) =>
-      character.name?.toLowerCase().includes(searchStrangerThings.toLowerCase())
+  const datosFiltrados = characters.filter((character) =>
+    character.name?.toLowerCase().includes(searchStrangerThings.toLowerCase())
   );
 
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -72,17 +71,16 @@ export const StrangerThings: FC = () => {
     setCurrentPage(1);
   };
 
-    // Reemplazar la foto si es la URL específica
-    const getValidPhoto = (photo: string) => {
-      const placeholderPhoto = "./stranger-things-default.jpg"; // Ruta de la imagen predeterminada
-      const specificPhotos = [
-        "https://upload.wikimedia.org/wikipedia/commons/3/38/Stranger_Things_logo.png",
-        "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/41/6496D145-7DEC-4C23-BB62-0059C0A1A72E.jpeg/revision/latest/scale-to-width-down/310?cb=20190709215216",
-      ];
-    
-      // Verifica si la foto está en la lista de URLs específicas
-      return specificPhotos.includes(photo) ? placeholderPhoto : photo;
-    };
+  // Reemplazar imagen caída
+  const getValidPhoto = (photo: string) => {
+    const placeholderPhoto = "./stranger-things-default.jpg";
+    const specificPhotos = [
+      "https://upload.wikimedia.org/wikipedia/commons/3/38/Stranger_Things_logo.png",
+      "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/41/6496D145-7DEC-4C23-BB62-0059C0A1A72E.jpeg/revision/latest/scale-to-width-down/310?cb=20190709215216",
+    ];
+
+    return specificPhotos.includes(photo) ? placeholderPhoto : photo;
+  };
 
   return (
     <div className="stranger-things-container pb-3">
@@ -107,12 +105,14 @@ export const StrangerThings: FC = () => {
       ) : (
         <>
           <div className="d-flex justify-content-around">
-          <Gallery<StrangerThingsCharacter> items={currentItems.map((character) => ({
+            <Gallery<StrangerThingsCharacter>
+              items={currentItems.map((character) => ({
                 ...character,
-                photo: getValidPhoto(character.photo), // Aplicar la validación de la foto
-              }))} styleType="stranger-things" />
+                photo: getValidPhoto(character.photo),
+              }))}
+              styleType="stranger-things"
+            />
           </div>
-
           <div className="pagination-container-st">{paginationButtons}</div>
         </>
       )}

@@ -18,7 +18,7 @@ export const HarryPotter: FC = () => {
   const [searchHarryPotter, setSearchHarryPotter] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 60; // Items per page
+  const itemsPerPage = 60; 
 
   useEffect(() => {
     axios

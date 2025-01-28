@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { MiniCard } from "../MiniCard/MiniCard";
+import "./gallery.scss"
 
 interface BaseCharacter {
   name: string;
@@ -9,7 +10,7 @@ interface BaseCharacter {
   ancestry?: string;
   house?: string;
   patronus?: string;
-  residence?: string;
+  residence?: string[];
   born?: string;
 }
 
@@ -23,7 +24,7 @@ export const Gallery = <T extends BaseCharacter>({
   styleType,
 }: GalleryProps<T>): JSX.Element => {
   return (
-    <div className="d-flex gap-5 flex-wrap justify-content-center pt-5 px-5">
+    <div className="gallery-container d-flex gap-5 flex-wrap justify-content-center">
       {items?.map((item: T, index: number) => (
          <MiniCard key={index} data={item} styleType={styleType} />
       ))}
