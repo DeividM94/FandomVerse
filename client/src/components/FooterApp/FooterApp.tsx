@@ -8,7 +8,7 @@ const FooterApp: FC = () => {
       <Container fluid>
         <div className="footer-content justify-content-center">
           <p>
-            &copy; 2024 {""}
+            &copy; 2025 {""}
             <a
               href="https://www.linkedin.com/in/dmontesgonzalez"
               target="_blank"

@@ -2,11 +2,13 @@
   background-image: url("/images/wallpaper.jpeg");
   background-size: cover; 
   background-position: center;
-  height: calc(100vh - 60.95px - 56px); 
+  min-height: calc(100vh - 60.95px - 56px); 
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+
+
 
   .card-container {
     display: grid;
@@ -57,3 +59,9 @@
     background-repeat: no-repeat;
   }
 }
+@media (max-width: 991px) {
+  .contenedor-ppal {
+    min-height: calc(100vh - 56px - 56px); 
+  }
+}
+
