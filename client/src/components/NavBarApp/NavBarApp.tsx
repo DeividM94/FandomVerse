@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import "./NavBarApp.scss";
+import "./navBarApp.scss";
 import { Link } from "react-router-dom";
 
 export const NavBarApp: FC = () => {
