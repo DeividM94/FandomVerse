@@ -1,5 +1,5 @@
 .contenedor-ppal {
-  background-image: url("./wallpaper.jpeg");
+  background-image: url("images/wallpaper.jpeg");
   background-size: cover; 
   background-position: center;
   height: calc(100vh - 60.95px - 56px); 
@@ -39,19 +39,19 @@
     
   }
   .card-1{
-    background-image: url('./harry-potter-card.jpg');
+    background-image: url('/images/harry-potter-card.jpg');
     background-position: center;
     background-size: contain;
   }
 
   .card-2{
-    background-image: url('./stranger-things-card.jpg');
+    background-image: url('/images/stranger-things-card.jpg');
     background-position: center;
     background-size: cover;
   }
 
   .card-3, .card-4 {
-    background-image: url('./comming-soon.jpg');
+    background-image: url('/images/comming-soon.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
