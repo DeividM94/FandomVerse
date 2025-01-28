@@ -9,7 +9,7 @@ export const NavBarApp: FC = () => {
       <Container fluid>
         <span className="link">
           <Link to="/">
-            <img src="./FandonVerse.png" alt="fandonVerse" className="fandonverse-logo" />
+            <img src="./images/FandonVerse.png" alt="fandonVerse" className="fandonverse-logo" />
           </Link>
         </span>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -17,14 +17,14 @@ export const NavBarApp: FC = () => {
           <Nav className="me-auto">
             <Link to="/harry-potter">
               <img
-                src="./harry-potter-logo.png"
+                src="./images/harry-potter-logo.png"
                 alt="harry-potter-logo"
                 className="hp-logo"
               />
             </Link>
             <Link to="/stranger-things">
               <img
-                src="./st-logo.png"
+                src="./images/st-logo.png"
                 alt="stranger-things-logo"
                 className="st-logo"
               />

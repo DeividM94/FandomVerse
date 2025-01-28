@@ -85,7 +85,7 @@ export const StrangerThings: FC = () => {
   return (
     <div className="stranger-things-container pb-3">
       <h1 className="stranger-things-title">
-        <img src="./Stranger-Things-title.png" alt="stranger-things-title" />
+        <img src="./images/Stranger-Things-title.png" alt="stranger-things-title" />
       </h1>
 
       <div className="search-container">

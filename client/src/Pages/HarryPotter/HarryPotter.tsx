@@ -67,7 +67,7 @@ export const HarryPotter: FC = () => {
     <div className="harry-potter-container">
       <h1 className="harry-potter-title">
         <img
-          src="./hp-characters-title.png"
+          src="./images/hp-characters-title.png"
           alt="harry-potter-character-title"
         />
       </h1>

@@ -33,7 +33,7 @@ export const MiniCard: React.FC<MiniCardProps> = ({ data, styleType }) => {
         {data.image || data.photo ? (
           <img src={data.image || data.photo} alt={data.name} className="cover-image" />
         ) : (
-          <img src="./card-default.jpg" alt="default-image" className="cover-image" />
+          <img src="./images/card-default.jpg" alt="default-image" className="cover-image" />
         )}
       </div>
     </div>
