@@ -73,7 +73,7 @@ export const StrangerThings: FC = () => {
 
   // Reemplazar imagen caída
   const getValidPhoto = (photo: string) => {
-    const placeholderPhoto = "./stranger-things-default.jpg";
+    const placeholderPhoto = "/stranger-things-default.jpg";
     const specificPhotos = [
       "https://upload.wikimedia.org/wikipedia/commons/3/38/Stranger_Things_logo.png",
       "https://vignette.wikia.nocookie.net/strangerthings8338/images/4/41/6496D145-7DEC-4C23-BB62-0059C0A1A72E.jpeg/revision/latest/scale-to-width-down/310?cb=20190709215216",
